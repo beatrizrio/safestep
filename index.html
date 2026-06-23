@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartStep — Plataforma Clínica de Monitoramento Plantar</title>
+<title>SafeStep — Plataforma de Monitoramento Plantar</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -825,7 +825,7 @@ tbody td {
       </button>
     </div>
     <div class="log-terminal" id="logBox">
-      <div class="log-dim">[sistema] SmartStep Dashboard v2.0 inicializado.</div>
+      <div class="log-dim">[sistema] SafeStep Dashboard v2.0 inicializado.</div>
       <div class="log-dim">[sistema] Conecte o Arduino via USB ou inicie a simulação.</div>
     </div>
   </div>
@@ -1762,7 +1762,7 @@ function exportarCSV() {
   ).join('\n');
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([h+r],{type:'text/csv'}));
-  a.download = `smartstep_${new Date().toISOString().slice(0,10)}.csv`;
+  a.download = `SafeStep_${new Date().toISOString().slice(0,10)}.csv`;
   a.click();
   logSerial(`💾 Exportado ${dadosExport.length} registros`, 'ok');
 }
